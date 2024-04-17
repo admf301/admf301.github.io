@@ -1,0 +1,15 @@
+:root {
+	--link-color: 		#33bdff;
+
+	--primary-color: 	#dcdfe3;
+	--secondary-color: 	#bbc2c9;
+	--tertiary-color: 	#9ba5ae;
+	--quaternary-color: #7a8794;
+
+	--primary-background:   #212529;
+	--secondary-background:	#181b1e;
+	--tertiary-background:  #343a40;		
+
+	--primary-font: "Heebo", sans-serif;
+	--secondary-font: "Roboto", sans-serif;
+}
