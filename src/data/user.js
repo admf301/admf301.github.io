@@ -64,8 +64,8 @@ const INFO = {
 	],
 
     source: {
-		project2048: 		"https://github.com/admf301/portfolio/blob/main/src/data/game-2048.jsx",
-        projectSummary: 	"https://github.com/admf301/portfolio",
+		project2048: 		"https://github.com/admf301/admf301.github.io/blob/main/src/data/game-2048.jsx",
+        projectSummary: 	"https://github.com/admf301/admf301.github.io",
         ProjectStructure: 	"https://github.com/admf301/school/tree/main/csci340/10-separatechaininghashtable-admf444",
         ProjectApp: 		"https://github.com/admf301/school/tree/main/csci470/assignment6/Assignment6/assignment6",
 	},
