@@ -17,15 +17,15 @@ function App() {
 	return (
 		<div className="App">
 			<Routes>
-				<Route path="https://admf301.github.io/" element={<Homepage />} />
-				<Route path="https://admf301.github.io/about" element={<About />} />
-				<Route path="https://admf301.github.io/projects" element={<Projects />} />
-				<Route path="https://admf301.github.io/contact" element={<Contact />} />
+				<Route path="https://admf301.github.io" element={<Homepage />} />
+				<Route path="/about" element={<About />} />
+				<Route path="/projects" element={<Projects />} />
+				<Route path="/contact" element={<Contact />} />
 
-				<Route path="https://admf301.github.io/project-2048" element={<Project2048 />} />
-				<Route path="https://admf301.github.io/project-summary" element={<ProjectSummary />} />
-				<Route path="https://admf301.github.io/project-hash-table" element={<ProjectStructure />} />
-				<Route path="https://admf301.github.io/project-mile-redeemer-app" element={<ProjectApp />} />
+				<Route path="/project-2048" element={<Project2048 />} />
+				<Route path="/project-summary" element={<ProjectSummary />} />
+				<Route path="/project-hash-table" element={<ProjectStructure />} />
+				<Route path="/project-mile-redeemer-app" element={<ProjectApp />} />
 
 				<Route path="*" element={<Notfound />} />
 			</Routes>

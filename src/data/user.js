@@ -3,7 +3,7 @@ const INFO = {
 		title: "Portfolio",
 		name: "Adam Filice",
 		email: "adamf7023@gmail.com",
-		logo: "/portfolio/public/main-logo.png",
+		logo: "https://admf301.github.io/main-logo.png",
 	},
 
 	socials: {
