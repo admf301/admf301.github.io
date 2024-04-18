@@ -14,7 +14,7 @@ const INFO = {
 	homepage: {
 		title: "Welcome to My Portfolio!",
 		description: 
-			"Here, you'll find a curated collection of my academic and personal software projects. Each project embodies my dedication to innovation and problem-solving in the realm of software development. From the engaging challenges of building your own game to the intricate workings of data structures and web applications, these endeavors epitomize my commitment to creativity and proficiency in the field. I invite you to explore my portfolio, where you will gain a glimpse into the depth of my technical skills and passion for software development!",
+			"Here, you'll find a curated collection of my academic and personal software projects. Each project embodies my dedication to innovation and problem-solving in the realm of software development. From the engaging challenges of building your own game to the intricate workings of data structures and web applications, these projects showcase my commitment to creativity and proficiency in the field. Feel free to explore my portfolio to get a glimpse into the depth of my technical skills and passion for software development!",
 	},
 
 	about: {

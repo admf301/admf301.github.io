@@ -104,13 +104,13 @@ const ProjectApp = () => {
 								</div>
 
 								<div className="subtitle projectApp-subtitle-desc">
-									The 'Destination.java' class serves as the foundational entity, responsible for encapsulating destination data
-									and behaviors within the system. By defining attributes such as place name base mileage cost, establishing 
+									The 'Destination.java' class serves as the foundational entity within the system, responsible for encapsulating destination data
+									and behaviors. By defining attributes such as place name base mileage cost, establishing 
 									essential structure for subsequent processing. 
 								</div>
 
                                 <div className="subtitle projectApp-subtitle-desc">
-                                    Central to the system's functionality is the 'MileRedeemer.java' class, which handles input file parsing and 
+                                    At the core of the system's functionality is the 'MileRedeemer.java' class, which handles input file parsing and 
 									flight planning algorithms through methods such as 'readDestinations()' and 'redeemMiles()'. Complementing the 
 									MileRedeemer class is a custom comparator for sorting of destination objects by base mileage, enabling effecient
 									organization and retrieval of destinations.
@@ -159,12 +159,12 @@ const ProjectApp = () => {
 
 								<div className="subtitle projectApp-subtitle-rev">
                                     The 'MileRedeemerAppUI.fxml' file defines the layout of the UI components, specifying attributes such as position,
-									dimensions, and behavior. The FXML file provides a structured blueprint for the graphical interface, enabling 
+									dimensions, and behavior. This FXML file serves a structured blueprint for the graphical interface, facilitating 
 									consistent rendering and user interaction across multiple different platforms and environments.
 								</div>
 
                                 <div className="subtitle projectApp-subtitle-rev">
-									You can view the full source for this project and my other work on my Github page by using the 'Source on Github'
+									You can access the full source code for this project and my other work on my Github page by using the 'Source on Github'
 									link near the top of the screen. Thank you for checking out my Java Flight Mile Rewards App summary. 
 								</div>
 							</div>

@@ -77,12 +77,12 @@ const ProjectStructure = () => {
 						</div>
 
 						<div className="subtitle projectStructure-subtitle">
-							Welcome to the summary of my C++ Hash Table Inventory System project I did as a junior in college. This project served as a 
-							practical exploration of constructing, manipulating, and managing a hash table, specifically tailored for an item inventory 
-							system. The project consisted of the creation, search, print, and sorting operations within the hash table.
+							Welcome to the summary of my C++ Hash Table Inventory System project I completed during my junior year in college. This project was a 
+							practical exploration of constructing, manipulating, and managing a hash table, specifically designed for an item inventory 
+							system. The project consisted of implementing the create, search, print, and sorting operations within the hash table.
 							Central to the implementation is the HT class, which encapsulates the functionality required to manage the hash 
-							table and perform operations. Leveraging C++ classes and STL containers, the HT class provides a robust framework for 
-							handling the item inventory system efficiently.
+							table and perform operations. By utilizing C++ classes and STL containers, the HT class provides a solid framework for 
+							efficiently handling the item inventory system.
 						</div>
 
                         <div className="projectStructure-social">
@@ -110,16 +110,16 @@ const ProjectStructure = () => {
 								</div>
 
 								<div className="subtitle projectStructure-subtitle-desc">
-									To facilitate efficient storage and retrieval for this project the inventory system utilized the concept of 
-									separate chaining to handle potential collisions. Separate chaining helps in managing collisions efficiently because
+									To facilitate efficient storage and retrieval for this project, the inventory system utilized the concept of 
+									separate chaining to handle potential collisions. Separate chaining helps manage collisions efficiently because
 									it ensures that even if multiple elements hash to the same index, they can all be stored and retrieved correctly 
 									without significant performance degradation.
 								</div>
 
 								<div className="subtitle projectStructure-subtitle-desc">
 									Utilizing separate chaining provides a straightforward and efficient way to handle collisions in a hash table. It is
-									also very low latency and efficient since the time complexity for insertion, deletion, and lookup are O(1) time
-									on average and O(n) at worst. Separate chaining can also easily accomodate a dynamic number of elements without
+									also very low latency and efficient, since the time complexity for insertion, deletion, and lookup are O(1) time
+									on average and O(n) at worst. Separate chaining can also easily accommodate a dynamic number of elements without a 
 									significant performance impact.
 								</div>
 							</div>
@@ -158,13 +158,13 @@ const ProjectStructure = () => {
 								</div>
 
 								<div className="subtitle projectStructure-subtitle-rev">
-									This inventory system hash table utilizes indirect sorting for its sorting algorithm. Indirect sorting creates a 
-									map of items identifier (key) and their position in the inventory. For example, if you wanted to search for a specific
+									This inventory system's hash table utilizes an indirect sorting technique for its sorting algorithm. Indirect sorting creates a 
+									map of items identifiers and their corresponding positions in the inventory. For instance, if you need to search for a specific
 									item, you can quickly locate its position in the inventory using the map, rather than scanning the whole inventory.
 								</div>
 
 								<div className="subtitle projectStructure-subtitle-rev">
-									You can view the full source for this project and my other work on my Github page by using the 'Source on Github'
+									You can access the complete source code for this project and my other work on my Github page by using the 'Source on Github'
 									link near the top of the screen. Thank you for checking out my C++ Hash Table Inventory System summary.
 								</div>
 							</div>

@@ -78,11 +78,11 @@ const Project2048 = () => {
 						</div>
 
 						<div className="subtitle project2048-subtitle">
-							Welcome to the interactive 2048 'Speed Edition'! This was one of my first personal projects I made using Javascript. 
+							Welcome to the interactive 2048 'Speed Edition'! This was one of my first personal projects created using Javascript. 
 							Initially conceived as a simple endeavor, it gradually morphed into something more complex as I kept adding more features.
-							Eventually I adapted it to React.js offering a more engaging and interactive experience. Please feel free to try the working
-							version of the game below! Directions are included, as well as a link to the source code available to view on my Github page.
-							Unfortunately the game controls only work on a keyboard.
+							Eventually, I adapted it to React.js to offer a more engaging and interactive experience. Please feel free to try the working
+							version of the game below! Directions are included, as well as a link to the source code available for viewing on my Github page.
+							Unfortunately the game controls are only functional using a keyboard.
 						</div>
 
 						<div className="project2048-social">
@@ -99,7 +99,7 @@ const Project2048 = () => {
 
 						<div className="subtitle project2048-subtitle">
 							<ol>
-        						<li><strong>Start the Game:</strong> Press the "Start" button to begin the game.</li>
+        						<li><strong>Start the Game:</strong> To begin the game, press the 'Start' button.</li>
         						<li><strong>Game Controls:</strong>
             						<ul>
                 						<li>Use "W" key to move tiles Up.</li>
@@ -108,10 +108,10 @@ const Project2048 = () => {
                 						<li>Use "D" key to move tiles Right.</li>
             						</ul>
         						</li>
-        						<li><strong>Gameplay:</strong> Combine tiles with the same value by moving them towards each other. Each move will spawn a new tile of value 2 or 4 on an empty spot. When two tiles with the same value collide, they merge into one tile with the sum of their values. The goal is to get the highest score in the alloted time.</li>
-        						<li><strong>Scoring:</strong> Combining higher value tiles results in a higher score. Try to strategize your moves to maximize your score.</li>
+        						<li><strong>Gameplay:</strong> Combine tiles with the same value by moving them towards each other. Each move will spawn a new tile of value 2 or 4 on an empty spot. When two tiles with the same value collide, they will merge into one tile with the sum of their values. The objective is to achieve the highest score within the given time frame.</li>
+        						<li><strong>Scoring:</strong> Combining tiles with higher values will result in a higher score. Try to strategize your moves to maximize your score.</li>
         						<li><strong>Time Limit:</strong> You have a set time limit to achieve the highest score possible.</li>
-        						<li><strong>Reset:</strong> If you want to start over or if the game ends, simply press the "Reset" button to reset the game board and your score.</li>
+        						<li><strong>Reset:</strong> If you want to start over or if the game ends, press the "Reset" button to reset the game board and your score.</li>
         						<li><strong>Have Fun:</strong> Enjoy the game and challenge yourself to beat your high score!</li>
     						</ol>
 						</div>

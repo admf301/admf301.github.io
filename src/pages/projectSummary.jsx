@@ -77,11 +77,11 @@ const ProjectSummary = () => {
 						</div>
 
 						<div className="subtitle projectSummary-subtitle">
-							Welcome to my React.js webpage portfolio overview. As an aspiring software engineer I utilize React.js to develop dynamic and
-                            responsive web applications. I made this webpage to not only showcase my various projects I've made throughout college and 
-                            in my personal time, but also to demonstrate my proficiency in React.js and creating intuitive user experiences. Through 
-                            continuous learning and collaboration, I strive to refine my skills and enhance my knowledge about emerging trends in web 
-                            development. This overview provides a structured glimpse into my work process and the functionality of this site.
+							Welcome to my React.js webpage portfolio overview. As an aspiring software engineer, I utilize React.js to develop dynamic and
+                            responsive web applications. I created this webpage to showcase the projects I have completed during college and 
+                            in my personal time, as well as to demonstrate my proficiency in React.js and creating intuitive user experiences. Through 
+                            continuous learning and collaboration, I aim to refine my skills and stay informed about emerging trends in web 
+                            development. This overview offers structured insight into my work process and the functionality of this site.
 						</div>
 
                         <div className="projectSummary-social">
@@ -107,13 +107,13 @@ const ProjectSummary = () => {
 									This React web application uzilizes the 'react-router-dom' library for handling routing between pages. This setup
 									enables navigation within the application by dynamically rendering components based on the URL path. Each page 
 									adheres to a standardized design paradigm wherein they define their unique JSX structures, handling state and effects
-									as needed. The 'Helmet' component is utilized to manage document metadata, ensuring dynamic updates to page titles.
+									as needed. The 'Helmet' component is used to manage document metadata, ensuring dynamic updates to page titles.
 									Additionally, common elements such as navigation bars, logos, social media links, and footers are incorporated to 
 									maintain a consistent structure and cohesive user experience throughout the application.
 								</div>
 
 								<div className="subtitle projectSummary-subtitle-desc">
-									Moreover, this application was designed with easy data management in mind through an intuitive configuration file
+									Futhermore, this application was designed with easy data management in mind through an intuitive configuration file
 									structure. Centralizing essential information such as page titles, descriptions, project details, contact information,
 									and social media links fosters streamlined development and maintenance processes. This systematic approach promotes
 									scalability and flexibility, allowing for seamless integration of new features without compromising code readability.
@@ -154,14 +154,14 @@ const ProjectSummary = () => {
 								</div>
 
 								<div className="subtitle projectSummary-subtitle-rev">
-									Each page and component has their own individually made CSS styling. By embracing a modularized design styling
-									strategy, distict design elements are curated to enhance the unique content and functionality of each page.
-									This strategic integration of customized styling not only improves aesthetic appeal but also elevates usability
+									Each page and component has their own individually made CSS styling. By adopting a modularized design styling
+									approach, distict design elements are curated to enhance the unique content and functionality of each page.
+									This strategic integration of customized styling not only enhances aesthetic appeal but also improves usability
 									and readability.
 								</div>
 
 								<div className="subtitle projectSummary-subtitle-rev">
-									You can view the full source for this webpage and my other work on my Github page by using the 'Source on Github'
+									You can access the full source code for this webpage and my other work on my Github page by using the 'Source on Github'
 									link near the top of the screen. Thank you for checking out my React.js Portfolio webpage overview.
 								</div>
 							</div>
