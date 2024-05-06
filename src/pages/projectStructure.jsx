@@ -106,7 +106,7 @@ const ProjectStructure = () => {
 
 								<div className="subtitle projectStructure-subtitle-desc">
 									The inventory itself is represented as a collection of items called entries, each characterized by a 
-									unique identifier key, a description, and a quatity encapsulated within a C++ struct. 
+									unique identifier key, a description, and a quantity encapsulated within a C++ struct. 
 								</div>
 
 								<div className="subtitle projectStructure-subtitle-desc">
