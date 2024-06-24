@@ -155,7 +155,7 @@ const ProjectSummary = () => {
 
 								<div className="subtitle projectSummary-subtitle-rev">
 									Each page and component has their own individually made CSS styling. By adopting a modularized design styling
-									approach, distict design elements are curated to enhance the unique content and functionality of each page.
+									approach, distinct design elements are curated to enhance the unique content and functionality of each page.
 									This strategic integration of customized styling not only enhances aesthetic appeal but also improves usability
 									and readability.
 								</div>

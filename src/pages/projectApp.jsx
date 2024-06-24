@@ -105,8 +105,8 @@ const ProjectApp = () => {
 
 								<div className="subtitle projectApp-subtitle-desc">
 									The 'Destination.java' class serves as the foundational entity within the system, responsible for encapsulating destination data
-									and behaviors. By defining attributes such as place name base mileage cost, establishing 
-									essential structure for subsequent processing. 
+									and behaviors. By defining attributes such as place, name, and base mileage cost, establishing 
+									data structure for subsequent processing. 
 								</div>
 
                                 <div className="subtitle projectApp-subtitle-desc">
