@@ -75,10 +75,6 @@ const ProjectSummary = () => {
 						</div>
 
 						<div className="subtitle projectSummary-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle projectSummary-subtitle">
 							Welcome to my React.js webpage portfolio overview. As an aspiring software engineer, I utilize React.js to develop dynamic and
                             responsive web applications. I created this webpage to showcase the projects I have completed during college and 
                             in my personal time, as well as to demonstrate my proficiency in React.js and creating intuitive user experiences. Through 

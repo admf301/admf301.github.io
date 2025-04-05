@@ -75,10 +75,6 @@ const ProjectStructure = () => {
 						</div>
 
 						<div className="subtitle projectStructure-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle projectStructure-subtitle">
 							Welcome to the summary of my C++ Hash Table Inventory System project I completed during my junior year in college. This project was a 
 							practical exploration of constructing, manipulating, and managing a hash table, specifically designed for an item inventory 
 							system. The project consisted of implementing the create, search, print, and sorting operations within the hash table.

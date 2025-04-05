@@ -73,10 +73,6 @@ const CSHHT = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							A fast-access website built for a towing company that provides 24/7 emergency services. The site is designed to ensure quick and easy contact for drivers in distress, featuring emergency contact options, 
 							booking capabilities, and optimized local SEO to drive service requests in urgent situations.
 						</div>

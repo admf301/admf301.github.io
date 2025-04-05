@@ -75,10 +75,6 @@ const ProjectApp = () => {
 						</div>
 
 						<div className="subtitle projectApp-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle projectApp-subtitle">
                             Welcome to the summary of my Java Flight Mile Rewards App project. This JavaFX project represents a comprehensive 
 							implementation of a flight mile redemption system, developed as part of a class during my senior year of
 							college. The project consisted of six key components, each fulfilling a unique roll in the system's archetecture and 

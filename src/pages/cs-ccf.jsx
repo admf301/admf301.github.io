@@ -73,10 +73,6 @@ const CSCCF = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							A clean, professional digital presence built for a financial advisor, this website was designed to support client acquisition and retention through integrated booking tools, a credibility-focused design, 
 							and search engine optimization tailored for city-specific visibility.
 						</div>

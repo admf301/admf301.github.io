@@ -71,11 +71,7 @@ const CSPDG = () => {
 						<div className="title">
 							Client Site: Pico de Gallo
 						</div>
-
-						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
+						
 						<div className="subtitle cs-subtitle">
 							A vibrant and engaging website created for a Mexican restaurant, this project includes a seamless online ordering system for both pickup and delivery, helping customers enjoy their favorite dishes with convenience and ease.
 						</div>

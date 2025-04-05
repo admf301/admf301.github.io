@@ -73,10 +73,6 @@ const CSDSC = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							A bold, service-focused website created for an auto body and collision repair shop, this project was designed to highlight repair expertise, streamline appointment booking, 
 							and drive local customer engagement through targeted SEO strategies.
 						</div>

@@ -73,10 +73,6 @@ const CSAFD = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							This project involved the design and development of a custom website for a dental practice, focusing on user experience, patient intake functionality, and search engine optimization. The goal was to provide a streamlined digital 
 							experience for new patients, enabling them to complete intake forms online and schedule appointments with ease. The website was also optimized for local SEO, ensuring the practice would rank well for dental services in their area.
 						</div>

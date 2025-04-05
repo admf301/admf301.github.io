@@ -73,10 +73,6 @@ const CSCSR = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							A polished, professional website built for a home remodeling company, this project was focused on showcasing past work, enabling easy appointment scheduling, 
 							and implementing location-focused SEO strategies to help the business grow its local client base.
 						</div>

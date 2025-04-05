@@ -102,6 +102,14 @@
 }
 
 @media (max-width: 1024px) {
+
+	.homepage-logo-container {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		padding-top: 70px;
+	}
+
 	.homepage-first-area {
 		flex-direction: column;
 	}
@@ -116,14 +124,23 @@
 
 	.homepage-title {
 		width: 100% !important;
-		margin-top: 20px;
+		font-size: 36px !important;
+		margin-top: 0px;
 		order: 2;
 	}
 
 	.homepage-subtitle {
 		width: 100% !important;
+		font-size: 14px !important;
 		margin-top: 10px;
 		order: 3;
+	}
+
+	.homepage-socials {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		padding-top: 40px;
 	}
 
 	.homepage-first-area-right-side {
@@ -132,17 +149,23 @@
 
 	.homepage-image-container {
 		display: none !important;
-		padding-top: 0px;
-		padding-bottom: 50px;
-		margin-left: 10px;
-		order: 1;
 	}
 
 	.homepage-after-title {
 		flex-direction: column;
 	}
 
+	.work-title, .project-title-p {
+		font-size: 36px !important;
+	}
+
+	.work-subtitle, .project-desc {
+		font-size: 14px !important;
+	}
+	
 	.homepage-projects {
 		flex-basis: auto;
+		margin-top: -60px !important;
+		margin-bottom: 60px !important;
 	}
 }

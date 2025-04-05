@@ -73,10 +73,6 @@ const CSAIM = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							This project involved the design and development of a streamlined website for a moving company. The goal was to create a fast, user-friendly platform that made it easy for customers to book moving services, while also enhancing 
 							the company’s local visibility and showcasing successful moves through dynamic content.
 						</div>

@@ -146,7 +146,12 @@
 
 @media (max-width: 600px) {
 	.projectStructure-container {
-		padding-top: 60px;
+		margin-top: 60px;
+	}
+
+	.projectStructure-main {
+		display: flex;
+		margin-top: -30px;
 	}
 
 	.projectStructure-main-rev {
@@ -162,6 +167,6 @@
     }
 
 	.projectStructure-image-container {
-		width: 80%;
+		width: 100%;
 	}
 }

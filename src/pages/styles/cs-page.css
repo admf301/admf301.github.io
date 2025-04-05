@@ -146,7 +146,12 @@
 
 @media (max-width: 600px) {
 	.cs-container {
-		padding-top: 60px;
+		margin-top: 40px;
+	}
+
+	.cs-main {
+		display: flex;
+		margin-top: -30px;
 	}
 
 	.cs-main-rev {
@@ -162,6 +167,6 @@
     }
 
 	.cs-image-container {
-		width: 80%;
+		width: 100%;
 	}
 }

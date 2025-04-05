@@ -73,10 +73,6 @@ const CSKCC = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							A warm and professional website designed for a nanny service, this project highlights caregiver credentials, streamlines the appointment booking process, and leverages local SEO to connect families with trusted childcare professionals.
 						</div>
 

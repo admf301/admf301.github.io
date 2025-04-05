@@ -73,10 +73,6 @@ const CSBLF = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							A responsive, image-forward website built for a boutique furniture store, this project was designed to showcase available pieces through a visual catalog, streamline design consultations for potential buyers, 
 							and strengthen the store’s presence in local search results.
 						</div>

@@ -73,10 +73,6 @@ const CSALW = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							Created for a skilled independent welding contractor, this website features a dynamic project portfolio to showcase past work, built-in scheduling functionality for client convenience, and local SEO enhancements 
 							to increase visibility among nearby residential and commercial clients.
 						</div>

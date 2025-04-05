@@ -73,10 +73,6 @@ const CSWGC = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							A conversion-driven website designed for a Georgia-based construction team, this site showcases recent projects, provides an easy-to-use online estimate request form, 
 							and utilizes local SEO strategies to enhance visibility and attract potential clients.
 						</div>

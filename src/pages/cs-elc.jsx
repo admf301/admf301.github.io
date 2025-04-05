@@ -73,10 +73,6 @@ const CSELC = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							Designed for a remodeling and custom cabinetry business, this website combines a refined visual inventory with user-friendly appointment booking and strategic local SEO—helping the 
 							company attract high-intent clients seeking bespoke kitchen and storage solutions.
 						</div>

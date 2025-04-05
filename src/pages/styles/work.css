@@ -28,8 +28,25 @@
 }
 
 @media (max-width: 600px) {
+
+	.work-logo-container {
+		display: flex;
+		justify-content: left;
+		padding-top: 40px;
+	}
+
+	.work-title {
+		width: 100% !important;
+		font-size: 32px !important;
+		margin-top: 20px;
+	}
+
+	.work-subtitle {
+		width: 100% !important;
+	}
+
 	.work-container {
-		padding-top: 120px;
+		padding-top: 20px;
 	}
 
 	.work-project {

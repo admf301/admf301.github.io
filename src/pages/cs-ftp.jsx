@@ -73,10 +73,6 @@ const CSFTP = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							A vibrant, portfolio-style website designed for a residential painting business, this project highlights the company’s past work, enables easy scheduling for consultations, 
 							and improves local search visibility to connect with homeowners in need of quality painting services.
 						</div>

@@ -77,10 +77,6 @@ const Project2048 = () => {
 						</div>
 
 						<div className="subtitle project2048-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle project2048-subtitle">
 							Welcome to the interactive 2048 'Speed Edition'! This was one of my first personal projects created using Javascript. 
 							Initially conceived as a simple endeavor, it gradually morphed into something more complex as I kept adding more features.
 							Eventually, I adapted it to React.js to offer a more engaging and interactive experience. Please feel free to try the working

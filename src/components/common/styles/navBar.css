@@ -55,11 +55,11 @@
 	transition: color 0.3s ease-in-out;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
 	.navbar {
 		margin-left: 25%;
 		margin-right: 25%;
-		width: 72%;
+		width: 100%;
 		font-size: 80%;
 	}
 

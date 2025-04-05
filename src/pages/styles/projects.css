@@ -27,9 +27,36 @@
 	margin-bottom: 150px;
 }
 
+.projects-subtitle {
+	margin-bottom: 0px !important;
+}
+
 @media (max-width: 600px) {
+
+	.projects-logo-container {
+		display: flex;
+		justify-content: left;
+		padding-top: 40px;
+	}
+
+	.projects-title {
+		width: 100% !important;
+		font-size: 32px !important;
+		margin-top: 0px;
+	}
+
+	.projects-subtitle {
+		width: 100% !important;
+		font-size: 14px !important;
+		margin-bottom: -50px !important;
+	}
+
 	.projects-container {
-		padding-top: 120px;
+		padding-top: 20px;
+	}
+
+	.projects-container {
+		padding-top: 40px;
 	}
 
 	.projects-project {

@@ -73,10 +73,6 @@ const CSSTH = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							A custom-built website designed for an HVAC business, this project features an online appointment booking system and targeted SEO enhancements to help attract local customers in need of heating and cooling services.
 						</div>
 

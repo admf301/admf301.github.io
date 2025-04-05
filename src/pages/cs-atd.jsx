@@ -73,10 +73,6 @@ const CSATD = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							Developed for a modern HVAC company focused on efficiency and accessibility, this custom website offers user-friendly appointment booking, integrated financing options for residential services, 
 							and localized SEO to help expand the company’s reach within its target service region.
 						</div>

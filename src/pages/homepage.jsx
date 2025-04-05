@@ -172,11 +172,11 @@ const Homepage = () => {
 						</div>
 
 						<div className="homepage-projects-area">
-								<div className="title work-title">
+								<div className="title project-title-p">
 									{INFO.homepage.projectTitle}
 								</div>
 
-								<div className="subtitle projects-subtitle">
+								<div className="subtitle project-desc">
 									{INFO.homepage.projectDesc}
 								</div>
 						</div>

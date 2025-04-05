@@ -73,10 +73,6 @@ const CSHDC = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							Designed for an in-home care provider, this website focuses on accessibility, allowing users to easily book services or apply for job openings, while also boosting local SEO to help the business 
 							connect with clients in need of home care assistance.
 						</div>

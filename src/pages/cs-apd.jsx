@@ -71,11 +71,7 @@ const CSAPD = () => {
 						<div className="title">
 							Client Site: A's Progressive Dental
 						</div>
-
-						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
+						
 						<div className="subtitle cs-subtitle">
 							Built for a forward-thinking dental practice focused on innovation and efficiency, this custom website streamlines new patient intake, simplifies appointment scheduling, and includes local SEO enhancements to improve search 
 							visibility and attract new patients in the surrounding area.

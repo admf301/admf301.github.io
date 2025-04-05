@@ -68,6 +68,10 @@
 
 @media (max-width: 600px) {
 
+	.project-container {
+		padding: 10px;
+	}
+
 	.project-title {
 		font-size: 15px;
 	}

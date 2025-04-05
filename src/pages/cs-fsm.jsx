@@ -73,10 +73,6 @@ const CSFSM = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							A responsive, service-oriented website built for a moving company offering year-round relocation services. This project emphasizes seamless appointment scheduling, clean design, 
 							and location-targeted SEO to help attract and convert local customers.
 						</div>

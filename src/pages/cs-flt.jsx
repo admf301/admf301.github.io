@@ -73,10 +73,6 @@ const CSFLT = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							A bold, responsive website created for a 24/7 towing service, this project focuses on quick-access booking, trust-building visuals, and optimized local search presence to help 
 							First Line Towing stay front-of-mind in emergency situations.
 						</div>

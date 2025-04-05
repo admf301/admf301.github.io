@@ -73,10 +73,6 @@ const CSGCG = () => {
 						</div>
 
 						<div className="subtitle cs-subtitle">
-                        	Clicking the logo in the top left corner returns you to the home page.
-						</div>
-
-						<div className="subtitle cs-subtitle">
 							A welcoming digital retreat designed for a local campsite, this website highlights beautiful amenities, provides an interactive photo gallery of the grounds, and incorporates strategic 
 							SEO to help attract both local and out-of-town travelers.
 						</div>
