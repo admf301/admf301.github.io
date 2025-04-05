@@ -4,11 +4,11 @@
 	display: flex;
 	justify-content: left;
 	align-items: center;
-	padding-top: 200px;
+	padding-top: 150px;
 }
 
 .homepage-container {
-	padding-top: 25px;
+	padding-top: 0px;
 }
 
 .homepage-first-area {
@@ -72,6 +72,31 @@
 	display: flex;
 }
 
+.homepage-work-area {
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 80px;
+}
+
+.work-subtitle {
+	width: 85% !important;
+	margin-bottom: -50px
+}
+
+.homepage-works {
+	flex-basis: 300px;
+}
+
+.homepage-projects-area {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.projects-subtitle {
+	width: 85% !important;
+	margin-bottom: -50px
+}
+
 .homepage-projects {
 	flex-basis: 300px;
 }
@@ -106,7 +131,8 @@
 	}
 
 	.homepage-image-container {
-		padding-top: 50px;
+		display: none !important;
+		padding-top: 0px;
 		padding-bottom: 50px;
 		margin-left: 10px;
 		order: 1;

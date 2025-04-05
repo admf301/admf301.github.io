@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import Logo from "../components/common/logo";
+import Footer from "../components/common/footer";
+import NavBar from "../components/common/navBar";
 import Game from "../data/game-2048";
 
 import INFO from "../data/user";
@@ -61,6 +63,7 @@ const Project2048 = () => {
 			</Helmet>
 
 			<div className="page-content">
+				<NavBar active="projects" />
 				<div className="content-wrapper">
 					<div className="project2048-logo-container">
 						<div className="project2048-logo" style={logoStyle}>
@@ -119,7 +122,10 @@ const Project2048 = () => {
 						<div className="main-content-container">
 							<Game />
 						</div>
-
+						
+						<div className="page-footer">
+							<Footer />
+						</div>
 					</div>
 				</div>
 			</div>

@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import Logo from "../components/common/logo";
-
+import Footer from "../components/common/footer";
+import NavBar from "../components/common/navBar";
 import INFO from "../data/user";
 
 import "./styles/projectApp.css"
@@ -60,6 +61,7 @@ const ProjectApp = () => {
 			</Helmet>
 
 			<div className="page-content">
+				<NavBar active="projects" />
 				<div className="content-wrapper">
 					<div className="projectApp-logo-container">
 						<div className="projectApp-logo" style={logoStyle}>
@@ -168,6 +170,9 @@ const ProjectApp = () => {
 									link near the top of the screen. Thank you for checking out my Java Flight Mile Rewards App summary. 
 								</div>
 							</div>
+						</div>
+						<div className="page-footer">
+							<Footer />
 						</div>
 					</div>
 				</div>

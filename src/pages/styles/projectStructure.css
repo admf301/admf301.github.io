@@ -81,7 +81,7 @@
 	display: inline-block;
 	overflow: hidden;
 	width: 100%;
-	border-radius: 10%;
+	border-radius: 40px;
 }
 
 .projectStructure-image-wrapper img {

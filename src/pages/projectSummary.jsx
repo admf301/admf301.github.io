@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import Logo from "../components/common/logo";
-
+import Footer from "../components/common/footer";
+import NavBar from "../components/common/navBar";
 import INFO from "../data/user";
 
 import "./styles/projectSummary.css"
@@ -60,6 +61,7 @@ const ProjectSummary = () => {
 			</Helmet>
 
 			<div className="page-content">
+				<NavBar active="projects" />
 				<div className="content-wrapper">
 					<div className="projectSummary-logo-container">
 						<div className="projectSummary-logo" style={logoStyle}>
@@ -166,6 +168,9 @@ const ProjectSummary = () => {
 								</div>
 							</div>
 						</div>
+					</div>
+					<div className="page-footer">
+							<Footer />
 					</div>
 				</div>
 			</div>

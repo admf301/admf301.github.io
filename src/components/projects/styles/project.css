@@ -67,6 +67,14 @@
 }
 
 @media (max-width: 600px) {
+	.project-title {
+		font-size: 15px;
+	}
+
+	.project-description {
+		font-size: 14px;
+	}
+
 	.project {
 		height: 340px;
 	}
