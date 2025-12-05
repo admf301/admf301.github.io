@@ -1,67 +1,83 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
-import Logo from "../components/common/logo";
-import Socials from "../components/about/socials";
-
-import INFO from "../data/user";
-
-import "./styles/contact.css";
 
 const Contact = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+  return (
+    <>
+      <Helmet>
+        <title>Contact | Adam Filice</title>
+        <meta
+          name="description"
+          content="Get in touch with Adam Filice via email or LinkedIn."
+        />
+      </Helmet>
 
-	return (
-		<React.Fragment>
-			<Helmet>
-				<title>{`Contact | ${INFO.main.title}`}</title>
-			</Helmet>
+      <div className="page-container">
+        <NavBar active="contact" />
 
-			<div className="page-content">
-				<NavBar active="contact" />
-				<div className="content-wrapper">
-					<div className="contact-logo-container">
-						<div className="contact-logo">
-							<Logo width={45} />
-						</div>
-					</div>
+        <div className="content-wrapper">
+          <main className="page-main">
+            <div className="page-heading">
+              <div className="page-heading-eyebrow">Contact</div>
+              <div className="page-heading-title">Let&apos;s talk</div>
+            </div>
 
-					<div className="contact-container">
-						<div className="title contact-title">
-							Let's Get in Touch: Ways to Connect with Me
-						</div>
+            <section className="page-section">
+              <p>
+                If you&apos;d like to talk about roles, projects, or how I think
+                about data, testing, or access control, I&apos;d be happy to
+                chat. I&apos;m especially interested in roles where I can learn
+                from more experienced engineers and contribute to systems that
+                actually get used.
+              </p>
+            </section>
 
-						<div className="subtitle contact-subtitle">
-							Thank you for your interest in getting in touch with me.  This website serves primarily as a platform for exploring 
-							employment opportunities, yet I also value your feedback, questions, and suggestions. Should you wish to discuss an 
-							employment opportunity, or have a specific question or comment, please feel free to email me directly at
-							{" "}
-							<a 
-								href={`mailto:${INFO.main.email}`}>
-								{INFO.main.email}
-							</a>
-							. I make an effort to respond to all messages within 24 hours, although it may take me longer during busy periods. Again, 
-							thank you for your interest on getting in touch with me! Hope to hear from you soon.
-						</div>
-					</div>
+            <section className="page-section two-column-grid">
+              <div className="contact-block">
+                <h2>Email</h2>
+                <a href="mailto:adamf7023@gmail.com">adamf7023@gmail.com</a>
+                <p style={{ marginTop: "0.5rem", color: "var(--tertiary-color)", fontSize: "0.9rem" }}>
+                  Best way to reach me. I&apos;m usually quick to respond.
+                </p>
+              </div>
 
-					<div className="socials-container">
-						<div className="contact-socials">
-							<Socials />
-						</div>
-					</div>
+              <div className="contact-block">
+                <h2>LinkedIn &amp; GitHub</h2>
+                <p style={{ marginBottom: "0.5rem" }}>
+                  You can also find me here:
+                </p>
+                <p style={{ margin: 0 }}>
+                  <a
+                    href="https://www.linkedin.com/in/admf301"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </p>
+                <p style={{ margin: 0 }}>
+                  <a
+                    href="https://github.com/admf301"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </p>
+              </div>
+            </section>
+          </main>
 
-					<div className="page-footer">
-						<Footer />
-					</div>
-				</div>
-			</div>
-		</React.Fragment>
-	);
+          <div className="page-footer">
+            <Footer />
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Contact;

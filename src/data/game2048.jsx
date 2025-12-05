@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import './styles/game-2048.css';
-import './styles.css'
-
 const GRID_SIZE = 4;
 const CHK_INTERVAL = 1000;
 const GAME_DURATION = 30;

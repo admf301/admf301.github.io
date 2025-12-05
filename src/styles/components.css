@@ -1,0 +1,533 @@
+/* ===========================
+   Nav bar — blurred, padded, modern
+   =========================== */
+
+.nav-container {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wrapper so the bar can stay centered & fixed */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 2rem;
+  z-index: 999;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Main pill bar */
+.nav-background {
+  background: rgba(10, 12, 13, 0.75); /* semi-transparent, darker */
+  backdrop-filter: blur(14px);        /* iOS-style blur */
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.7rem 1.4rem; /* increased vertical padding */
+  width: min(720px, 90%);
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+  pointer-events: auto;
+
+  transition: box-shadow 0.25s ease;
+}
+
+/* Shadow appears only after scrolling a little */
+.navbar.scrolled .nav-background {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  font-family: var(--secondary-font);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Base link style */
+.nav-item a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+
+  transition:
+    color 0.18s ease,
+    background 0.18s ease,
+    transform 0.15s ease;
+}
+
+/* Hover: change text to site blue */
+.nav-item a:hover {
+  color: var(--link-color);
+  background: transparent;
+}
+
+.nav-item.active a {
+  color: var(--link-color);
+  background: transparent;
+  font-weight: 600;
+}
+
+/* Mobile layout adjustments */
+@media (max-width: 600px) {
+  .navbar {
+    top: 1.2rem;
+  }
+
+  .nav-background {
+    width: calc(100% - 2.4rem);
+    padding: 0.6rem 1rem;
+  }
+
+  .nav-item {
+    font-size: 0.78rem;
+  }
+
+  .nav-item a {
+    padding: 0.3rem 0.5rem;
+  }
+}
+
+
+/* ===========================
+   Footer
+   =========================== */
+
+.footer {
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  align-items: center;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--tertiary-color);
+}
+
+.footer-links,
+.footer-credits {
+  flex-basis: 50%;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer-nav-link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-nav-link-list a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.footer-nav-link-list a:hover {
+  text-decoration: underline;
+}
+
+.footer-credits {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Responsive footer */
+
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-credits {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+
+  .footer-nav-link-list {
+    justify-content: center;
+  }
+}
+
+/* ===========================
+   Project cards grid
+   =========================== */
+
+.all-projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.all-projects-project {
+  width: calc(100% / 2);
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+/* Stack cards on small screens */
+@media (max-width: 700px) {
+  .all-projects-project {
+    width: 100%;
+  }
+}
+
+/* ===========================
+   Project card
+   =========================== */
+
+.project {
+  background: var(--tertiary-background);
+  mix-blend-mode: normal;
+  border-radius: 20px;
+  opacity: 0.95;
+  height: 100%;
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    background-color 0.12s ease;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+.project a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project:hover {
+  background: #464e56;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.65);
+}
+
+.project-container {
+  padding: 1.4rem 1.4rem 1.1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  line-height: 1.5;
+  margin-bottom: 0.85rem;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.project-link-icon {
+  font-size: 0.85rem;
+  color: var(--quaternary-color);
+}
+
+.project-link-text {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--link-color);
+}
+
+/* ===========================
+   Generic card (from card.css)
+   =========================== */
+
+.card {
+  mix-blend-mode: normal;
+  border-radius: 20px;
+  outline: 2px solid var(--tertiary-color);
+  background: var(--primary-background);
+}
+
+.card-container {
+  padding: 30px;
+  padding-bottom: 5px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.card-subtitle {
+  color: var(--tertiary-color);
+  font-size: 0.9rem;
+}
+
+.card-body {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ===========================
+   Socials (from socials.css)
+   =========================== */
+
+.social,
+.email-wrapper {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.social a,
+.email-wrapper a {
+  text-decoration: none;
+}
+
+.social-icon {
+  font-size: 15px;
+  color: var(--secondary-color);
+}
+
+.social-text {
+  padding-left: 10px;
+  color: var(--secondary-color);
+}
+
+.email::before {
+  content: "";
+  display: block;
+  padding-top: 20px;
+  border-top: 3px solid var(--tertiary-color);
+  margin-top: 20px;
+}
+
+.email-wrapper {
+  padding-top: 20px;
+  padding-bottom: 110px;
+}
+
+/* ===========================
+   2048 game styles (from old game2048.css)
+   =========================== */
+
+.tile {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+}
+
+.row {
+  display: flex;
+}
+
+.game-board-container {
+  position: relative;
+  margin-top: 8rem;
+}
+
+.game-board {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#score-container,
+#high-score-container,
+#timer-container {
+  color: var(--tertiary-color);
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  left: calc(50% - 205px);
+}
+
+#score-container {
+  top: calc(100% - 440px);
+}
+
+#high-score-container {
+  top: calc(100% - 470px);
+}
+
+#timer-container {
+  top: calc(100% - 500px);
+}
+
+#start-button,
+#reset-button {
+  position: absolute;
+  left: calc(50% + 91px);
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--tertiary-color);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#start-button {
+  padding: 8px 29px;
+  top: calc(100% - 503px);
+}
+
+#reset-button {
+  padding: 8px 24px;
+  top: calc(100% - 455px);
+}
+
+#start-button:hover,
+#reset-button:hover {
+  color: var(--link-color);
+}
+
+#start-button:focus,
+#reset-button:focus {
+  outline: none;
+}
+
+.lose-screen {
+  position: absolute;
+  top: calc(50% + 250px);
+  left: 50%;
+  color: #f22011;
+  font-size: 24px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .tile {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .cell {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #000;
+  }
+
+  .game-board-container {
+    position: relative;
+    margin-top: 8rem;
+  }
+
+  #score-container,
+  #high-score-container,
+  #timer-container {
+    color: var(--tertiary-color);
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    left: 5%;
+  }
+
+  #score-container {
+    top: calc(100% - 330px);
+  }
+
+  #high-score-container {
+    top: calc(100% - 360px);
+  }
+
+  #timer-container {
+    top: calc(100% - 390px);
+  }
+
+  #start-button,
+  #reset-button {
+    position: absolute;
+    left: 65%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--tertiary-color);
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  #start-button {
+    padding: 8px 29px;
+    top: calc(100% - 380px);
+  }
+
+  #reset-button {
+    padding: 8px 24px;
+    top: calc(100% - 340px);
+  }
+
+  #start-button:hover,
+  #reset-button:hover {
+    color: var(--link-color);
+  }
+
+  #start-button:focus,
+  #reset-button:focus {
+    outline: none;
+  }
+
+  .lose-screen {
+    position: absolute;
+    top: calc(50% + 200px);
+    left: 50%;
+    color: #f22011;
+    font-size: 24px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+

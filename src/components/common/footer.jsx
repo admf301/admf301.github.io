@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./styles/footer.css";
-
 const Footer = () => {
 	return (
 		<React.Fragment>
@@ -16,9 +14,6 @@ const Footer = () => {
 							<Link to="/about">About</Link>
 						</li>
 						<li className="footer-nav-link-item">
-							<Link to="/work">My Work</Link>
-						</li>
-						<li className="footer-nav-link-item">
 							<Link to="/projects">Projects</Link>
 						</li>
 						<li className="footer-nav-link-item">
@@ -29,7 +24,7 @@ const Footer = () => {
 
 				<div className="footer-credits">
 					<div className="footer-credits-text">
-						admf301 // 2025
+						admf301 // 2026
 					</div>
 				</div>
 			</div>

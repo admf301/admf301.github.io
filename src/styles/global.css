@@ -1,0 +1,565 @@
+/* ===========================
+   Global theme & layout
+   =========================== */
+
+:root {
+  --link-color: #33bdff;
+
+  --primary-color: #dcdfe3;
+  --secondary-color: #bbc2c9;
+  --tertiary-color: #9ba5ae;
+  --quaternary-color: #7a8794;
+
+  --primary-background: #212529;
+  --secondary-background: #181b1e;
+  --tertiary-background: #343a40;
+
+  /* General UI tokens */
+  --border-subtle: #2b3035;
+  --accent: #33bdff;
+  --accent-soft: rgba(51, 189, 255, 0.12);
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.4);
+  --max-width: 1200px;
+
+  /* Typography */
+  --primary-font: "Heebo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --secondary-font: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--primary-font);
+  background-color: var(--secondary-background);
+  color: var(--primary-color);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--secondary-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-background);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #111518;
+}
+
+/* Links */
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout shells */
+
+.page-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #262b33 0, #111316 55%, #050608 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width);  /* this is 1200px in :root */
+  margin: 0 auto;               /* center the column */
+  /* Extra top padding to clear the fixed navbar */
+  padding: 6.5rem 1.5rem 3.5rem;
+  box-sizing: border-box;
+}
+
+/* Central column for all page bodies */
+.home-hero,
+.about-main,
+.projects-main,
+.page-main,
+.notfound-main {
+  width: 100%;
+  margin: 0;
+}
+
+/* ===========================
+   Typography helpers
+   =========================== */
+
+h1, h2, h3 {
+  letter-spacing: 0.01em;
+}
+
+.page-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.75rem;
+}
+
+.page-heading-eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--tertiary-color);
+}
+
+.page-heading-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Generic reusable section layout */
+
+.page-section {
+  margin-top: 2.5rem;
+}
+
+.page-section-header {
+  margin-bottom: 1rem;
+}
+
+.page-section-title {
+  font-size: 1.3rem;
+  margin: 0 0 0.35rem;
+}
+
+.page-section-subtitle {
+  margin: 0;
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+}
+
+/* Simple two-column grid used on About / Contact */
+
+.two-column-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .two-column-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* ===========================
+   Homepage
+   =========================== */
+
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.home-hero-text h1 {
+  font-size: 2.4rem;
+  margin: 0 0 0.75rem;
+}
+
+.home-hero-text p {
+  margin: 0;
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+.home-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+/* Buttons used on the homepage */
+
+/* Base solid button styling */
+.home-button {
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+
+  background: var(--tertiary-background); /* Solid dark button */
+  color: var(--primary-color);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.18s ease,
+    transform 0.15s ease,
+    box-shadow 0.18s ease;
+}
+
+/* Remove underline completely */
+.home-button:hover,
+.home-button:focus,
+.home-button:active {
+  text-decoration: none !important;
+}
+
+/* Primary button — solid blue */
+.home-button.primary {
+  background: var(--accent);
+  color: #020617;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+.home-button.primary:hover {
+  background: #5fd2ff; /* slight brighten */
+  transform: translateY(-2px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.65); /* matches project cards */
+}
+
+/* Secondary button — same dark solid as project cards */
+.home-button.secondary {
+  background: var(--tertiary-background);
+  color: var(--primary-color);
+}
+
+.home-button.secondary:hover {
+  background: #464e56; /* EXACT same hover shade as project cards */
+  transform: translateY(-2px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.65); /* identical to project cards */
+}
+
+
+.home-section {
+  margin-top: 2.5rem;
+}
+
+.home-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.home-section-intro {
+  margin: 0 0 1.25rem;
+  color: var(--secondary-color);
+}
+
+/* Focus cards */
+
+.home-focus-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.home-focus-card {
+  background: var(--primary-background);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.home-focus-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.home-focus-card p {
+  margin: 0;
+  color: var(--tertiary-color);
+}
+
+/* Two-column section on homepage */
+
+.home-two-column {
+  display: grid;
+  gap: 1rem;
+}
+
+.home-column-card {
+  background: var(--primary-background);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.home-column-card h2 {
+  font-size: 1.3rem;
+  margin: 0 0 0.75rem;
+}
+
+.home-column-card p {
+  margin: 0 0 0.75rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+.home-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--secondary-color);
+}
+
+.home-list li {
+  margin-bottom: 0.4rem;
+}
+
+/* Skills snapshot grid */
+
+.home-skills-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.home-skill-card {
+  background: var(--primary-background);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--border-subtle);
+}
+
+.home-skill-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.home-skill-card p {
+  margin: 0 0 0.25rem;
+  color: var(--tertiary-color);
+}
+
+/* Homepage projects preview */
+
+.home-projects-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.home-project-card {
+  background: var(--primary-background);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem 1.3rem;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.home-project-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.home-project-card-text {
+  margin: 0 0 0.6rem;
+  color: var(--tertiary-color);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.home-project-card-link {
+  font-size: 0.9rem;
+}
+
+
+/* ===========================
+   About page
+   =========================== */
+
+.about-main {
+  background: rgba(24, 27, 30, 0.85);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.75rem 2rem;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+}
+
+
+.about-main h1 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+.about-section {
+  margin-bottom: 1.75rem;
+}
+
+.about-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-section p {
+  margin: 0 0 0.75rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+.about-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--secondary-color);
+}
+
+.about-list li {
+  margin-bottom: 0.35rem;
+}
+
+/* ===========================
+   Projects page
+   =========================== */
+
+
+.projects-main {
+  background: rgba(24, 27, 30, 0.85);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.75rem 2rem;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+}
+
+.projects-main h1,
+.page-heading-title {
+  font-size: 2rem;
+  margin: 0 0 0.75rem;
+}
+
+.projects-intro {
+  margin: 0 0 1.5rem;
+  color: var(--secondary-color);
+}
+
+/* ===========================
+   Contact page
+   =========================== */
+
+.contact-main,
+.page-main {
+  background: rgba(24, 27, 30, 0.85);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.75rem 2rem;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+}
+
+
+.contact-main h1 {
+  font-size: 2rem;
+  margin: 0 0 0.75rem;
+}
+
+.contact-main p {
+  margin: 0 0 1.25rem;
+  color: var(--secondary-color);
+}
+
+.contact-block {
+  margin-bottom: 1.5rem;
+}
+
+.contact-block h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.35rem;
+}
+
+.contact-block a {
+  font-family: var(--secondary-font);
+}
+
+/* ===========================
+   404 page
+   =========================== */
+
+.notfound-main {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.notfound-main h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.notfound-main p {
+  color: var(--secondary-color);
+}
+
+.notfound-link {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* ===========================
+   Footer spacing
+   =========================== */
+
+.page-footer {
+  margin-top: 2.5rem;
+}
+
+/* ===========================
+   Responsive tweaks
+   =========================== */
+
+@media (min-width: 768px) {
+  .content-wrapper {
+    padding: 6.5rem 1.5rem 4rem;
+  }
+
+  .home-hero {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .home-hero-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .home-focus-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-two-column {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

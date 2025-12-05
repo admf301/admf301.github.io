@@ -1,15 +1,9 @@
+/* Fonts for the whole app */
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Roboto:wght@500&display=swap");
-@import "./data/styles.css";
 
+/* Optional: you can delete this file later if you move font import into global.css */
 body {
-	margin: 0;
-	font-family: var(--primary-font);
-	background-image: url(../public/tile.png);
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
