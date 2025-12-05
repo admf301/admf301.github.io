@@ -4,6 +4,7 @@ const GRID_SIZE = 4;
 const CHK_INTERVAL = 1000;
 const GAME_DURATION = 30;
 
+/* eslint-disable react-hooks/exhaustive-deps */
 const Game = () => {
 
     const [grid, setGrid] = useState(() => {
@@ -356,5 +357,6 @@ const Game = () => {
         </div>
     );
 };
+/* eslint-disable react-hooks/exhaustive-deps */
 
 export default Game;

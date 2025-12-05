@@ -51,7 +51,7 @@ const Contact = () => {
                 </p>
                 <p style={{ margin: 0 }}>
                   <a
-                    href="https://www.linkedin.com/in/admf301"
+                    href="https://www.linkedin.com/in/adam-filice-8a96852a5/"
                     target="_blank"
                     rel="noreferrer"
                   >

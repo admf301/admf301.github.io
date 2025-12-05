@@ -16,12 +16,12 @@ const Socials = () => {
 
       <div className="social">
         <a
-          href="https://www.linkedin.com/in/admf301"
+          href="https://www.linkedin.com/in/adam-filice-8a96852a5/"
           target="_blank"
           rel="noreferrer"
         >
           <span className="social-icon">IN</span>
-          <span className="social-text">linkedin.com/in/admf301</span>
+          <span className="social-text">linkedin.com/in/adam-filice</span>
         </a>
       </div>
 
