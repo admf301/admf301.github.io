@@ -372,6 +372,7 @@
 .game-board-container {
   position: relative;
   margin-top: 8rem;
+  touch-action: none;
 }
 
 .game-board {

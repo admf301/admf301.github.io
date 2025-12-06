@@ -6,9 +6,11 @@ const GAME_DURATION = 30;
 
 /* eslint-disable react-hooks/exhaustive-deps */
 const Game = () => {
-
     const [grid, setGrid] = useState(() => {
-        const initialGrid = Array.from({ length: GRID_SIZE }, () => Array.from({ length: GRID_SIZE }, () => 0));
+        const initialGrid = Array.from(
+            { length: GRID_SIZE },
+            () => Array.from({ length: GRID_SIZE }, () => 0)
+        );
         return initialGrid;
     });
 
@@ -18,11 +20,14 @@ const Game = () => {
     const [isTimerRunning, setIsTimerRunning] = useState(false);
     const [isLoseScreenVisible, setIsLoseScreenVisible] = useState(false);
 
+    // For touch / swipe on mobile
+    const [touchStart, setTouchStart] = useState(null);
+
     const Tile = ({ value, id }) => {
         const tileColor = getTileColor(value);
         return (
             <div id={id} className="tile" style={{ backgroundColor: tileColor }}>
-                {value !== 0 ? value : ''}
+                {value !== 0 ? value : ""}
             </div>
         );
     };
@@ -44,7 +49,10 @@ const Game = () => {
     };
 
     const initializeGrid = () => {
-        const newGrid = Array.from({ length: GRID_SIZE }, () => Array.from({ length: GRID_SIZE }, () => 0));
+        const newGrid = Array.from(
+            { length: GRID_SIZE },
+            () => Array.from({ length: GRID_SIZE }, () => 0)
+        );
         setGrid(newGrid);
         updateScore(0);
         addNewTile(newGrid);
@@ -85,18 +93,19 @@ const Game = () => {
     };
 
     const updateScore = (value) => {
-        setScore(score => score + value);
-        
-        if(score > highScore) {
-            setHighScore(score);
-        }
+        // Keep score + high score in sync
+        setScore((prevScore) => {
+            const newScore = prevScore + value;
+            setHighScore((prevHigh) => Math.max(prevHigh, newScore));
+            return newScore;
+        });
     };
 
     const isGameOver = () => {
         if (!grid || grid.length === 0) {
             return false;
         }
-    
+
         for (let row = 0; row < GRID_SIZE; row++) {
             for (let col = 0; col < GRID_SIZE; col++) {
                 if (grid[row][col] === 0) {
@@ -104,23 +113,23 @@ const Game = () => {
                 }
             }
         }
-    
+
         for (let row = 0; row < GRID_SIZE; row++) {
             for (let col = 0; col < GRID_SIZE; col++) {
                 if (
-                    (row < GRID_SIZE - 1 && grid[row][col] === grid[row + 1][col]) || 
-                    (col < GRID_SIZE - 1 && grid[row][col] === grid[row][col + 1]) 
+                    (row < GRID_SIZE - 1 && grid[row][col] === grid[row + 1][col]) ||
+                    (col < GRID_SIZE - 1 && grid[row][col] === grid[row][col + 1])
                 ) {
                     return false;
                 }
             }
         }
-    
+
         return true;
     };
 
     const startTimer = () => {
-        if(!isTimerRunning && score === 0) {
+        if (!isTimerRunning && score === 0) {
             setIsTimerRunning(true);
         }
     };
@@ -151,7 +160,10 @@ const Game = () => {
         for (let j = 0; j < GRID_SIZE; j++) {
             for (let i = 1; i < GRID_SIZE; i++) {
                 for (let k = i; k > 0; k--) {
-                    if (newGrid[k][j] !== 0 && (newGrid[k - 1][j] === 0 || newGrid[k - 1][j] === newGrid[k][j])) {
+                    if (
+                        newGrid[k][j] !== 0 &&
+                        (newGrid[k - 1][j] === 0 || newGrid[k - 1][j] === newGrid[k][j])
+                    ) {
                         if (newGrid[k - 1][j] === 0) {
                             newGrid[k - 1][j] = newGrid[k][j];
                             newGrid[k][j] = 0;
@@ -181,7 +193,10 @@ const Game = () => {
         for (let j = 0; j < GRID_SIZE; j++) {
             for (let i = GRID_SIZE - 2; i >= 0; i--) {
                 for (let k = i; k < GRID_SIZE - 1; k++) {
-                    if (newGrid[k][j] !== 0 && (newGrid[k + 1][j] === 0 || newGrid[k + 1][j] === newGrid[k][j])) {
+                    if (
+                        newGrid[k][j] !== 0 &&
+                        (newGrid[k + 1][j] === 0 || newGrid[k + 1][j] === newGrid[k][j])
+                    ) {
                         if (newGrid[k + 1][j] === 0) {
                             newGrid[k + 1][j] = newGrid[k][j];
                             newGrid[k][j] = 0;
@@ -211,7 +226,10 @@ const Game = () => {
         for (let i = 0; i < GRID_SIZE; i++) {
             for (let j = 1; j < GRID_SIZE; j++) {
                 for (let k = j; k > 0; k--) {
-                    if (newGrid[i][k] !== 0 && (newGrid[i][k - 1] === 0 || newGrid[i][k - 1] === newGrid[i][k])) {
+                    if (
+                        newGrid[i][k] !== 0 &&
+                        (newGrid[i][k - 1] === 0 || newGrid[i][k - 1] === newGrid[i][k])
+                    ) {
                         if (newGrid[i][k - 1] === 0) {
                             newGrid[i][k - 1] = newGrid[i][k];
                             newGrid[i][k] = 0;
@@ -241,7 +259,10 @@ const Game = () => {
         for (let i = 0; i < GRID_SIZE; i++) {
             for (let j = GRID_SIZE - 2; j >= 0; j--) {
                 for (let k = j; k < GRID_SIZE - 1; k++) {
-                    if (newGrid[i][k] !== 0 && (newGrid[i][k + 1] === 0 || newGrid[i][k + 1] === newGrid[i][k])) {
+                    if (
+                        newGrid[i][k] !== 0 &&
+                        (newGrid[i][k + 1] === 0 || newGrid[i][k + 1] === newGrid[i][k])
+                    ) {
                         if (newGrid[i][k + 1] === 0) {
                             newGrid[i][k + 1] = newGrid[i][k];
                             newGrid[i][k] = 0;
@@ -264,13 +285,13 @@ const Game = () => {
         return moved;
     };
 
+    // Keyboard controls (WASD)
     useEffect(() => {
         const handleKeyDown = (event) => {
-
             if (!isTimerRunning || isGameOver() || isLoseScreenVisible) {
                 return;
             }
-    
+
             let moved = false;
             switch (event.key) {
                 case "w":
@@ -288,28 +309,27 @@ const Game = () => {
                 default:
                     return;
             }
-    
+
             if (moved) {
                 checkGameOverAndDisplay();
             }
         };
-    
+
         window.addEventListener("keydown", handleKeyDown);
-    
+
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
         };
     }, [isTimerRunning, isLoseScreenVisible]);
 
+    // Timer
     useEffect(() => {
         let timerId;
         if (isTimerRunning && timer > 0) {
             timerId = setInterval(() => {
-                setTimer(prevTimer => prevTimer - 1);
+                setTimer((prevTimer) => prevTimer - 1);
             }, 1000);
-        } 
-        
-        else if (timer === 0) {
+        } else if (timer === 0) {
             clearInterval(timerId);
             displayLoseScreen();
         }
@@ -317,6 +337,7 @@ const Game = () => {
         return () => clearInterval(timerId);
     }, [timer, isTimerRunning]);
 
+    // Initial setup + periodic game-over check
     useEffect(() => {
         initializeGrid();
         const intervalId = setInterval(checkGameOverAndDisplay, CHK_INTERVAL);
@@ -326,34 +347,99 @@ const Game = () => {
         };
     }, []);
 
-    return (
-        <div className="game-board-container">
+    // Touch handlers for mobile swipe
+    const handleTouchStart = (e) => {
+        const touch = e.touches[0];
+        setTouchStart({
+            x: touch.clientX,
+            y: touch.clientY,
+        });
+    };
 
+    const handleTouchEnd = (e) => {
+        if (!touchStart) return;
+
+        // Respect same conditions as keyboard
+        if (!isTimerRunning || isGameOver() || isLoseScreenVisible) {
+            setTouchStart(null);
+            return;
+        }
+
+        const touch = e.changedTouches[0];
+        const dx = touch.clientX - touchStart.x;
+        const dy = touch.clientY - touchStart.y;
+
+        const absX = Math.abs(dx);
+        const absY = Math.abs(dy);
+        const swipeThreshold = 30; // px threshold
+
+        if (absX < swipeThreshold && absY < swipeThreshold) {
+            setTouchStart(null);
+            return;
+        }
+
+        let moved = false;
+
+        if (absX > absY) {
+            // Horizontal swipe
+            if (dx > 0) {
+                moved = moveRight();
+            } else {
+                moved = moveLeft();
+            }
+        } else {
+            // Vertical swipe
+            if (dy > 0) {
+                moved = moveDown();
+            } else {
+                moved = moveUp();
+            }
+        }
+
+        if (moved) {
+            checkGameOverAndDisplay();
+        }
+
+        setTouchStart(null);
+    };
+
+    return (
+        <div
+            className="game-board-container"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+        >
             <div className="game-board">
                 <GameBoard grid={grid} />
             </div>
 
             <div id="score-container">
-                <span>Score: </span><span id="score">{score}</span>
+                <span>Score: </span>
+                <span id="score">{score}</span>
             </div>
 
             <div id="high-score-container">
-                <span>High Score: </span><span id="high-score">{highScore}</span>
+                <span>High Score: </span>
+                <span id="high-score">{highScore}</span>
             </div>
 
             <div id="timer-container">
-                <span>Time Left: </span><span id="timer">{timer}</span>
+                <span>Time Left: </span>
+                <span id="timer">{timer}</span>
             </div>
 
-            <button id="start-button" className="btn btn-primary" onClick={startTimer}>Start</button>
-            <button id="reset-button" className="btn btn-primary" onClick={restartGame}>Reset</button>
+            <button id="start-button" className="btn btn-primary" onClick={startTimer}>
+                Start
+            </button>
+            <button id="reset-button" className="btn btn-primary" onClick={restartGame}>
+                Reset
+            </button>
 
             {isLoseScreenVisible && (
-            <div id="lose-screen" className="lose-screen">
-                <h2>Game Over!</h2>
-            </div>
+                <div id="lose-screen" className="lose-screen">
+                    <h2>Game Over!</h2>
+                </div>
             )}
-  
         </div>
     );
 };

@@ -32,7 +32,8 @@ const Homepage = () => {
                 I&apos;m a computer science graduate who likes systems that are{" "}
                 <strong>predictable</strong>, <strong>testable</strong>, and{" "}
                 <strong>easy to reason about</strong>. Recently, I&apos;ve been
-                leaning into data, QA, and access-control adjacent work.
+                leaning into data, QA, and access-control adjacent work and
+                building projects that reflect that.
               </p>
 
               <div className="home-hero-actions">
@@ -45,6 +46,22 @@ const Homepage = () => {
               </div>
             </div>
           </header>
+
+          {/* Projects entry point – moved up */}
+          <section className="home-section">
+            <h2>Projects</h2>
+            <p className="home-section-intro">
+              I&apos;m actively building focused projects that represent how I
+              think about systems—things like this portfolio&apos;s structure
+              and my 2048 Speed Edition game. These are the best places to see
+              how I approach logic, structure, and behavior.
+            </p>
+            <AllProjects />
+
+            <div className="home-section-footer-link">
+              <Link to="/projects">View all projects →</Link>
+            </div>
+          </section>
 
           {/* What I'm looking for / What I bring */}
           <section className="home-section home-two-column">
@@ -87,31 +104,31 @@ const Homepage = () => {
           {/* Focus areas */}
           <section className="home-section">
             <h2>What I&apos;m focusing on</h2>
-              <div className="home-focus-grid">
-                <div className="home-focus-card">
-                  <h3>Data &amp; Analytics</h3>
-                  <p>Using Python and SQL to clean, explore, and interpret datasets.</p>
-                </div>
-                <div className="home-focus-card">
-                  <h3>Quality &amp; Testing</h3>
-                  <p>
-                    Designing workflows that catch issues early and make behavior predictable.
-                  </p>
-                </div>
-                <div className="home-focus-card">
-                  <h3>Access &amp; Structure</h3>
-                  <p>
-                    Thinking through auth flows, permissions, and well-organized system logic.
-                  </p>
-                </div>
-                <div className="home-focus-card">
-                  <h3>System Behavior & Debugging</h3>
-                  <p>
-                    Understanding how systems really behave, not how we assume they do, and
-                    fixing issues at the root.
-                  </p>
-                </div>
+            <div className="home-focus-grid">
+              <div className="home-focus-card">
+                <h3>Data &amp; Analytics</h3>
+                <p>Using Python and SQL to clean, explore, and interpret datasets.</p>
               </div>
+              <div className="home-focus-card">
+                <h3>Quality &amp; Testing</h3>
+                <p>
+                  Designing workflows that catch issues early and make behavior predictable.
+                </p>
+              </div>
+              <div className="home-focus-card">
+                <h3>Access &amp; Structure</h3>
+                <p>
+                  Thinking through auth flows, permissions, and well-organized system logic.
+                </p>
+              </div>
+              <div className="home-focus-card">
+                <h3>System Behavior &amp; Debugging</h3>
+                <p>
+                  Understanding how systems really behave, not how we assume they do, and
+                  fixing issues at the root.
+                </p>
+              </div>
+            </div>
           </section>
 
           {/* Skills snapshot */}
@@ -141,19 +158,26 @@ const Homepage = () => {
             </div>
           </section>
 
-          {/* Projects entry point */}
-          <section className="home-section">
-            <h2>Projects</h2>
-            <p className="home-section-intro">
-              I&apos;m actively building out focused projects that represent how
-              I think about systems, not just how many technologies I can list.
-              You can see what I&apos;ve shipped so far on the Projects page.
+          {/* Closing text section – full-width, no cards */}
+          <section className="home-section closing-text">
+            <h2>A bit about how I work</h2>
+            <p>
+              I like projects that feel practical — things where you can trace inputs to
+              outputs and understand why the system behaves the way it does. Whether
+              that’s data work, game logic, or improving a workflow, I try to build in a
+              way that makes the next person&apos;s job easier, including my future self.
             </p>
-            <AllProjects />
+            <p>
+              This portfolio is a living project. As I learn more about data, quality,
+              and system design, I update this space to reflect that. If you&apos;d like
+              to talk about roles, projects, or anything related to how systems behave,
+              I&apos;m always open to connecting.
+            </p>
 
-            <div className="home-section-footer-link">
-              <Link to="/projects">View all projects →</Link>
-            </div>
+            <p>
+              Thanks for taking the time to look around — I hope the work here gives you
+              a clear picture of how I think and what I care about building.
+            </p>
           </section>
 
           <div className="page-footer">
