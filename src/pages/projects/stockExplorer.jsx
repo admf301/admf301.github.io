@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, } from "react";
 import { Helmet } from "react-helmet";
 import {
   ResponsiveContainer,
@@ -101,7 +101,7 @@ const TICKER_NAME_FALLBACK = {
 
 const COLOR_PRICE = "var(--link-color)";
 const COLOR_MA20  = "#f59e0b";
-const COLOR_MA50  = "#22c55e";      
+const COLOR_MA50  = "#22c55e";  
 
 /* -----------------------------
    Helpers
@@ -430,6 +430,14 @@ const StockExplorer = () => {
     };
   }, []);
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth < 700);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   const tickerMeta = useMemo(() => {
     const map = new Map();
     for (const r of rows) {
@@ -732,11 +740,19 @@ const StockExplorer = () => {
 
                       <div className="stock-chart-wrap">
                         <ResponsiveContainer width="100%" height={440}>
-                          <LineChart data={chartData}>
+                          <LineChart data={chartData}
+                              margin={{
+                              top: 6,
+                              right: isMobile ? 6 : 16,
+                              left: isMobile ? -4 : 8,
+                              bottom: 0,
+                            }}
+                          >
                             <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="date" tickMargin={8} minTickGap={24} />
+                            <XAxis dataKey="date" tickMargin={isMobile ? 6 : 8} minTickGap={isMobile ? 48 : 24} />
                             <YAxis
-                              tickMargin={8}
+                              width={isMobile ? 34 : 48}
+                              tickMargin={isMobile ? 4 : 8}
                               domain={["auto", "auto"]}
                               tickFormatter={(v) => Number(v).toFixed(0)}
                             />
@@ -782,11 +798,19 @@ const StockExplorer = () => {
                       <h2 className="stock-chart-title">{returnsTitle}</h2>
                       <div className="stock-chart-wrap">
                         <ResponsiveContainer width="100%" height={440}>
-                          <BarChart data={returnsChartData}>
+                          <BarChart data={returnsChartData}
+                              margin={{
+                                top: 6,
+                                right: isMobile ? 6 : 16,
+                                left: isMobile ? -4 : 8,
+                                bottom: 0,
+                              }}
+                          >
                             <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="date" tickMargin={8} minTickGap={24} />
+                            <XAxis dataKey="date" tickMargin={isMobile ? 6 : 8} minTickGap={isMobile ? 48 : 24} />
                             <YAxis
-                              tickMargin={8}
+                              width={isMobile ? 34 : 52}
+                              tickMargin={isMobile ? 4 : 8}
                               domain={returnAxis.domain}
                               ticks={returnAxis.ticks}
                               tickFormatter={(v) => `${v}%`}

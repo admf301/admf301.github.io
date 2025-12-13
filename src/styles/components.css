@@ -763,6 +763,48 @@
 }
 
 /* ===========================
+   Stock Explorer — mobile
+   =========================== */
+
+@media (max-width: 700px) {
+
+  .project-shell {
+    padding: 0.85rem;
+    border-radius: 1rem;
+  }
+
+  /* If this page uses project-shell AND content-wrapper padding,
+     reduce the inner cards padding slightly so content feels wider */
+  .stock-table-card,
+  .stock-kpi-card,
+  .stock-insight-card {
+    padding: 0.85rem 0.9rem;
+  }
+  
+  .stock-chart-card {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .stock-control {
+    min-width: 0;
+    flex: 1 1 170px;               /* grows/shrinks nicely */
+  }
+
+  .stock-select {
+    width: 100%;
+  }
+
+  .stock-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stock-insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
    Recharts tooltip theming
    =========================== */
 
@@ -813,4 +855,26 @@
 .recharts-text {
   fill: var(--secondary-color) !important;
 }
+
+/* ===========================
+   Recharts — mobile axis scaling
+   =========================== */
+
+@media (max-width: 700px) {
+  /* X + Y axis numbers */
+  .recharts-cartesian-axis-tick-value {
+    font-size: 11px !important;
+  }
+
+  /* Tooltip text can be slightly smaller too */
+  .recharts-tooltip-label {
+    font-size: 12px !important;
+  }
+
+  .recharts-tooltip-item-name,
+  .recharts-tooltip-item-value {
+    font-size: 12px !important;
+  }
+}
+
 
