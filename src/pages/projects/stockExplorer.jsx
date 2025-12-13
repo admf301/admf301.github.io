@@ -629,7 +629,7 @@ const StockExplorer = () => {
               </p>
             </header>
 
-            <section className="project-shell">
+            <section className="">
               {loading && <p>Loading dataset…</p>}
               {error && <p style={{ color: "#ff6b6b" }}>{error}</p>}
 
