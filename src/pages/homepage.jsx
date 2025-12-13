@@ -51,10 +51,9 @@ const Homepage = () => {
           <section className="home-section">
             <h2>Projects</h2>
             <p className="home-section-intro">
-              I&apos;m actively building focused projects that represent how I
-              think about systems—things like this portfolio&apos;s structure
-              and my 2048 Speed Edition game. These are the best places to see
-              how I approach logic, structure, and behavior.
+              I build focused projects that show how I think about systems in practice. 
+              These highlight my approach to logic, structure, and real-world behavior 
+              rather than just tools or technologies.
             </p>
             <AllProjects />
 

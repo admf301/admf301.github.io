@@ -4,13 +4,22 @@
 // We can add more (Data / QA / IAM) here later.
 
 export const PROJECTS = [
+    {
+    id: "stock-explorer",
+    title: "Stock Market Explorer",
+    description:
+      "An interactive data dashboard exploring historical stock prices, daily returns, and volatility using a Python data pipeline and a React frontend.",
+    linkText: "View Stock Explorer",
+    link: "/projects/stock-explorer",
+    tech: ["Python", "Pandas", "Jupyter", "React", "Data Analysis"],
+  },
   {
     id: "2048",
     title: "2048 Speed Edition",
     description:
       "A fast-paced twist on the classic 2048 puzzle game with a countdown timer and responsive controls.",
     linkText: "View 2048 Project",
-    link: "/project-2048",
+    link: "/projects/2048",
     tech: ["JavaScript", "React", "Game Logic"],
   },
   {
@@ -19,16 +28,7 @@ export const PROJECTS = [
     description:
       "A walkthrough of how this portfolio is structured, including routing, components, and data-driven sections.",
     linkText: "View Portfolio Overview",
-    link: "/project-portfolio-overview",
+    link: "/projects/portfolio-overview",
     tech: ["React", "Routing", "Component Architecture"],
   },
-  // Future:
-  // {
-  //   id: "data-eda",
-  //   title: "Exploratory Data Analysis Project",
-  //   description: "End-to-end data cleaning, analysis, and visualization in Python.",
-  //   linkText: "View Data Project",
-  //   link: "/project-data-eda",
-  //   tech: ["Python", "Pandas", "Jupyter"],
-  // },
 ];

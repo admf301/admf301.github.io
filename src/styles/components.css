@@ -532,3 +532,285 @@
   }
 }
 
+/* ===========================
+   Stock Explorer
+   =========================== */
+
+.project-shell {
+  background: var(--primary-background);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.25rem 1.4rem;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.stock-controls {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.stock-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 160px;
+}
+
+.stock-label {
+  font-size: 0.85rem;
+  color: var(--tertiary-color);
+}
+
+.stock-select {
+  background-color: rgba(24, 27, 30, 0.9);
+  border: 1px solid var(--border-subtle);
+  color: var(--primary-color);
+
+  padding: 0.55rem 2.4rem 0.55rem 0.75rem;
+  border-radius: 0.75rem;
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1.5L6 6.5L11 1.5' stroke='%23BBC2C9' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center; /* ← spacing from edge */
+  background-size: 12px 8px;
+
+  cursor: pointer;
+}
+
+.stock-select:focus {
+  border-color: rgba(51, 189, 255, 0.45);
+}
+
+.stock-toggles {
+  display: flex;
+  gap: 1.1rem;
+  align-items: center;
+  padding-bottom: 0.475rem; /* micro-adjust for visual baseline */
+  flex-wrap: wrap;
+}
+
+.stock-toggle {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+.stock-toggle input[type="checkbox"] {
+  accent-color: var(--accent);
+  transform: translateY(1px); /* tiny baseline correction */
+}
+
+.stock-kpi-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 1.25rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stock-kpi-card {
+  background: rgba(24, 27, 30, 0.7);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.05rem;
+}
+
+.stock-kpi-label {
+  color: var(--tertiary-color);
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+.stock-kpi-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.stock-kpi-sub {
+  color: var(--quaternary-color);
+  font-size: 0.85rem;
+}
+
+.stock-kpi-text {
+  color: var(--secondary-color);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.stock-chart-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stock-chart-card,
+.stock-table-card {
+  background: rgba(24, 27, 30, 0.7);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.05rem;
+}
+
+.stock-chart-title {
+  margin: 0 0 0.85rem;
+  font-size: 1.1rem;
+}
+
+.stock-chart-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.stock-table-wrap {
+  overflow-x: auto;
+}
+
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stock-table th,
+.stock-table td {
+  text-align: left;
+  padding: 0.65rem 0.4rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.stock-table th {
+  color: var(--tertiary-color);
+  font-weight: 600;
+  border-top: none;
+}
+
+/* Computed insights grid */
+.stock-insights-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1rem;
+}
+
+.stock-insight-card {
+  background: rgba(24, 27, 30, 0.7);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.05rem;
+}
+
+.stock-insight-title {
+  color: var(--tertiary-color);
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+.stock-insight-value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.stock-insight-sub {
+  color: var(--secondary-color);
+  line-height: 1.45;
+  font-size: 0.9rem;
+}
+
+/* Price card header row: title left, MA toggles right */
+.stock-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.stock-card-toggles {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.stock-toggle.compact {
+  font-size: 0.85rem;
+  gap: 0.45rem;
+}
+
+@media (max-width: 900px) {
+  .stock-insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .stock-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .stock-chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   Recharts tooltip theming
+   =========================== */
+
+/* Tooltip container */
+.recharts-tooltip-wrapper,
+.recharts-default-tooltip {
+  background: rgba(10, 12, 13, 0.95) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* Date label (top line) */
+.recharts-tooltip-label {
+  color: var(--link-color) !important;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* "Close:", "Loss:", "Gain:" labels */
+.recharts-tooltip-item-name {
+  color: var(--tertiary-color) !important;
+  font-weight: 600;
+}
+
+/* Actual numeric values */
+.recharts-tooltip-item-value {
+  color: var(--primary-color) !important;
+  font-weight: 600;
+}
+
+/* Full row (keeps spacing consistent) */
+.recharts-tooltip-item {
+  color: inherit !important;
+}
+
+/* Cursor hover line */
+.recharts-tooltip-cursor {
+  stroke: rgba(51, 189, 255, 0.35) !important;
+}
+
+/* Axis tick text */
+.recharts-cartesian-axis-tick-value {
+  fill: var(--secondary-color) !important;
+}
+
+/* Fallback for SVG text nodes */
+.recharts-text {
+  fill: var(--secondary-color) !important;
+}
+

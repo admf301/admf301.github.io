@@ -22,7 +22,7 @@ const ProjectSummary = () => {
           <main className="page-main project-page-main">
             {/* Intro */}
             <header className="project-page-header">
-              <p className="project-page-kicker">Overview</p>
+              <p className="project-page-kicker">Personal Project</p>
               <h1>How This Portfolio Is Designed & Built</h1>
               <p className="project-page-intro">
                 This page provides a clear overview of how this portfolio works:

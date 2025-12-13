@@ -11,6 +11,8 @@ import Notfound from "./pages/404";
 // Project detail pages (now in /pages/projects)
 import Project2048 from "./pages/projects/project2048";
 import ProjectSummary from "./pages/projects/projectSummary";
+import StockExplorer from "./pages/projects/stockExplorer";
+
 
 import "./app.css";
 
@@ -36,11 +38,10 @@ function App() {
         <Route path="/contact" element={<Contact />} />
 
         {/* Personal project detail pages */}
-        <Route path="/project-2048" element={<Project2048 />} />
-        <Route
-          path="/project-portfolio-overview"
-          element={<ProjectSummary />}
-        />
+        <Route path="/projects/2048" element={<Project2048 />} />
+        <Route path="/projects/portfolio-overview" element={<ProjectSummary />} />
+        <Route path="/projects/stock-explorer" element={<StockExplorer />} />
+
 
         {/* 404 */}
         <Route path="*" element={<Notfound />} />

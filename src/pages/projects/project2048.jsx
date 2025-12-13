@@ -23,7 +23,7 @@ const Project2048 = () => {
           <main className="page-main project-page-main">
             {/* Header / overview */}
             <header className="project-page-header">
-              <p className="project-page-kicker">Project</p>
+              <p className="project-page-kicker">Personal Project</p>
               <h1>2048 Speed Edition</h1>
               <p className="project-page-intro">
                 2048 Speed Edition is a modern implementation of the classic
