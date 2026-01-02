@@ -1,10 +1,5 @@
-// src/data/projects.js
-
-// Single source of truth for projects shown on the Projects page.
-// We can add more (Data / QA / IAM) here later.
-
 export const PROJECTS = [
-    {
+  {
     id: "stock-explorer",
     title: "Stock Market Explorer",
     description:
@@ -12,6 +7,24 @@ export const PROJECTS = [
     linkText: "View Stock Explorer",
     link: "/projects/stock-explorer",
     tech: ["Python", "Pandas", "Jupyter", "React", "Data Analysis"],
+  },
+  {
+    id: "data-quality-monitor",
+    title: "Data Quality Monitor",
+    description:
+      "A data quality monitoring dashboard that surfaces missing values, duplicates, and outliers through clear KPIs, trends, and structured findings.",
+    linkText: "View Data Quality Monitor",
+    link: "/projects/data-quality-monitor",
+    tech: ["Python", "Data Quality", "React", "Recharts"]
+  },
+  {
+    id: "iam-policy-lab",
+    title: "IAM Policy Evaluator",
+    description:
+      "An interactive RBAC + policy engine that evaluates access requests, explains decisions, and logs audit events.",
+    linkText: "View IAM Project",
+    link: "/projects/iam-policy-lab",
+    tech: ["React", "RBAC", "Policy Logic", "Audit Logging"],
   },
   {
     id: "2048",

@@ -144,7 +144,7 @@ function parseCSV(text) {
   const iDate = idx("Date");
   const iTicker = idx("Ticker");
   const iClose = idx("Close");
-  const iRet = idx("DailyReturn"); // may be missing
+  const iRet = idx("DailyReturn");
   const iCompany = idx("Company");
   const iName = idx("Name");
 

@@ -1,0 +1,133 @@
+{
+  "generatedAt": "2025-12-31T00:00:00Z",
+  "scenarios": [
+    {
+      "id": "baseline",
+      "title": "Baseline scan",
+      "description": "Stable period with low error rates and consistent data patterns.",
+      "kpis": { "rows": 125600, "missingRate": 0.011, "dupRate": 0.001, "outlierRate": 0.006 },
+      "series": [
+        { "date": "2025-01-01", "missingRate": 0.010, "dupRate": 0.001, "outlierRate": 0.006 },
+        { "date": "2025-01-02", "missingRate": 0.011, "dupRate": 0.001, "outlierRate": 0.006 },
+        { "date": "2025-01-03", "missingRate": 0.012, "dupRate": 0.001, "outlierRate": 0.005 }
+      ],
+      "topIssues": [
+        { "type": "Missing values", "field": "email", "count": 760 },
+        { "type": "Outliers", "field": "amount", "count": 395 },
+        { "type": "Duplicates", "field": "user_id", "count": 135 }
+      ]
+    },
+    {
+      "id": "missing-spike",
+      "title": "Missing spike detected",
+      "description": "A sudden increase in missing values affecting key customer fields.",
+      "kpis": { "rows": 118400, "missingRate": 0.067, "dupRate": 0.002, "outlierRate": 0.008 },
+      "series": [
+        { "date": "2025-01-01", "missingRate": 0.018, "dupRate": 0.001, "outlierRate": 0.007 },
+        { "date": "2025-01-02", "missingRate": 0.024, "dupRate": 0.002, "outlierRate": 0.007 },
+        { "date": "2025-01-03", "missingRate": 0.082, "dupRate": 0.002, "outlierRate": 0.010 }
+      ],
+      "topIssues": [
+        { "type": "Missing values", "field": "email", "count": 6400 },
+        { "type": "Missing values", "field": "zip", "count": 4100 },
+        { "type": "Missing values", "field": "state", "count": 2900 }
+      ]
+    },
+    {
+      "id": "duplicate-surge",
+      "title": "Duplicate surge",
+      "description": "A spike in duplicate records suggests a replayed ingest or bad merge key.",
+      "kpis": { "rows": 131250, "missingRate": 0.014, "dupRate": 0.019, "outlierRate": 0.007 },
+      "series": [
+        { "date": "2025-01-01", "missingRate": 0.012, "dupRate": 0.002, "outlierRate": 0.006 },
+        { "date": "2025-01-02", "missingRate": 0.013, "dupRate": 0.006, "outlierRate": 0.006 },
+        { "date": "2025-01-03", "missingRate": 0.015, "dupRate": 0.027, "outlierRate": 0.008 }
+      ],
+      "topIssues": [
+        { "type": "Duplicates", "field": "transaction_id", "count": 3120 },
+        { "type": "Duplicates", "field": "user_id", "count": 1480 },
+        { "type": "Duplicates", "field": "order_id", "count": 990 }
+      ]
+    },
+    {
+      "id": "outlier-burst",
+      "title": "Outlier burst in amounts",
+      "description": "Unusual transaction amounts indicate potential unit mismatch or upstream bug.",
+      "kpis": { "rows": 121900, "missingRate": 0.013, "dupRate": 0.001, "outlierRate": 0.031 },
+      "series": [
+        { "date": "2025-01-01", "missingRate": 0.012, "dupRate": 0.001, "outlierRate": 0.007 },
+        { "date": "2025-01-02", "missingRate": 0.013, "dupRate": 0.001, "outlierRate": 0.012 },
+        { "date": "2025-01-03", "missingRate": 0.014, "dupRate": 0.001, "outlierRate": 0.041 }
+      ],
+      "topIssues": [
+        { "type": "Outliers", "field": "amount", "count": 3760 },
+        { "type": "Outliers", "field": "tax", "count": 980 },
+        { "type": "Outliers", "field": "shipping_cost", "count": 640 }
+      ]
+    },
+    {
+      "id": "schema-drift",
+      "title": "Schema drift warning",
+      "description": "New/renamed fields detected; downstream mappings may need updates.",
+      "kpis": { "rows": 119750, "missingRate": 0.016, "dupRate": 0.002, "outlierRate": 0.007 },
+      "series": [
+        { "date": "2025-01-01", "missingRate": 0.013, "dupRate": 0.001, "outlierRate": 0.006 },
+        { "date": "2025-01-02", "missingRate": 0.015, "dupRate": 0.002, "outlierRate": 0.007 },
+        { "date": "2025-01-03", "missingRate": 0.019, "dupRate": 0.002, "outlierRate": 0.007 }
+      ],
+      "topIssues": [
+        { "type": "Missing values", "field": "country_code", "count": 1540 },
+        { "type": "Missing values", "field": "phone", "count": 1210 },
+        { "type": "Outliers", "field": "amount", "count": 520 }
+      ]
+    },
+    {
+      "id": "join-key-break",
+      "title": "Join key integrity regression",
+      "description": "Primary identifiers show elevated nulls/duplicates, risking failed joins and reporting gaps.",
+      "kpis": { "rows": 116300, "missingRate": 0.038, "dupRate": 0.009, "outlierRate": 0.008 },
+      "series": [
+        { "date": "2025-01-01", "missingRate": 0.017, "dupRate": 0.002, "outlierRate": 0.007 },
+        { "date": "2025-01-02", "missingRate": 0.024, "dupRate": 0.005, "outlierRate": 0.007 },
+        { "date": "2025-01-03", "missingRate": 0.052, "dupRate": 0.020, "outlierRate": 0.010 }
+      ],
+      "topIssues": [
+        { "type": "Missing values", "field": "user_id", "count": 4380 },
+        { "type": "Duplicates", "field": "user_id", "count": 1120 },
+        { "type": "Missing values", "field": "transaction_id", "count": 2050 }
+      ]
+    },
+    {
+      "id": "regional-null-skew",
+      "title": "Regional null skew",
+      "description": "Missingness concentrated in specific geographies suggests partial feed loss or field mapping issues.",
+      "kpis": { "rows": 123480, "missingRate": 0.029, "dupRate": 0.002, "outlierRate": 0.007 },
+      "series": [
+        { "date": "2025-01-01", "missingRate": 0.014, "dupRate": 0.001, "outlierRate": 0.006 },
+        { "date": "2025-01-02", "missingRate": 0.021, "dupRate": 0.002, "outlierRate": 0.007 },
+        { "date": "2025-01-03", "missingRate": 0.034, "dupRate": 0.002, "outlierRate": 0.008 }
+      ],
+      "topIssues": [
+        { "type": "Missing values", "field": "state", "count": 2680 },
+        { "type": "Missing values", "field": "zip", "count": 2210 },
+        { "type": "Missing values", "field": "city", "count": 1790 }
+      ]
+    },
+    {
+      "id": "pipeline-lag",
+      "title": "Pipeline lag detected",
+      "description": "Freshness degradation indicates delayed ingestion or upstream latency.",
+      "kpis": { "rows": 117900, "missingRate": 0.015, "dupRate": 0.001, "outlierRate": 0.006 },
+      "series": [
+        { "date": "2025-01-01", "missingRate": 0.013, "dupRate": 0.001, "outlierRate": 0.006 },
+        { "date": "2025-01-02", "missingRate": 0.014, "dupRate": 0.001, "outlierRate": 0.006 },
+        { "date": "2025-01-03", "missingRate": 0.018, "dupRate": 0.001, "outlierRate": 0.007 }
+      ],
+      "topIssues": [
+        { "type": "Missing values", "field": "event_time", "count": 1320 },
+        { "type": "Outliers", "field": "session_duration", "count": 510 },
+        { "type": "Missing values", "field": "device_id", "count": 840 }
+      ]
+    }
+  ]
+}

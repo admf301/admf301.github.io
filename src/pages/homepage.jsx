@@ -106,7 +106,7 @@ const Homepage = () => {
             <div className="home-focus-grid">
               <div className="home-focus-card">
                 <h3>Data &amp; Analytics</h3>
-                <p>Using Python and SQL to clean, explore, and interpret datasets.</p>
+                <p>Using Python and SQL to clean, explore, and interpret datasets with a focus on trends and insights.</p>
               </div>
               <div className="home-focus-card">
                 <h3>Quality &amp; Testing</h3>
@@ -136,7 +136,7 @@ const Homepage = () => {
             <div className="home-skills-grid">
               <div className="home-skill-card">
                 <h3>Languages &amp; Tools</h3>
-                <p>Python, SQL, JavaScript, Java</p>
+                <p>Python, SQL, JavaScript, Java, C++</p>
                 <p>React, REST APIs, basic Node.js</p>
               </div>
               <div className="home-skill-card">

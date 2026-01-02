@@ -12,6 +12,8 @@ import Notfound from "./pages/404";
 import Project2048 from "./pages/projects/project2048";
 import ProjectSummary from "./pages/projects/projectSummary";
 import StockExplorer from "./pages/projects/stockExplorer";
+import DataQualityMonitor from "./pages/projects/dataQualityMonitor";
+import IAMPolicyLab from "./pages/projects/iamPolicyLab";
 
 
 import "./app.css";
@@ -41,7 +43,8 @@ function App() {
         <Route path="/projects/2048" element={<Project2048 />} />
         <Route path="/projects/portfolio-overview" element={<ProjectSummary />} />
         <Route path="/projects/stock-explorer" element={<StockExplorer />} />
-
+        <Route path="/projects/data-quality-monitor" element={<DataQualityMonitor />} />
+        <Route path="/projects/iam-policy-lab" element={<IAMPolicyLab />} />
 
         {/* 404 */}
         <Route path="*" element={<Notfound />} />

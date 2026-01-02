@@ -1,0 +1,156 @@
+{
+  "generatedAt": "2026-01-02T00:00:00Z",
+  "roles": [
+    {
+      "id": "viewer",
+      "name": "Viewer",
+      "permissions": [
+        { "resourceType": "report", "actions": ["read"] },
+        { "resourceType": "dashboard", "actions": ["read"] }
+      ]
+    },
+    {
+      "id": "analyst",
+      "name": "Analyst",
+      "permissions": [
+        { "resourceType": "report", "actions": ["read", "export"] },
+        { "resourceType": "dashboard", "actions": ["read"] },
+        { "resourceType": "dataset", "actions": ["read"] }
+      ]
+    },
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        { "resourceType": "report", "actions": ["read", "export", "share"] },
+        { "resourceType": "dashboard", "actions": ["read", "share"] },
+        { "resourceType": "dataset", "actions": ["read", "request_access"] }
+      ]
+    },
+    {
+      "id": "admin",
+      "name": "Admin",
+      "permissions": [
+        { "resourceType": "*", "actions": ["*"] }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "rep-fin-q4",
+      "type": "report",
+      "name": "Finance — Q4 KPI Report",
+      "ownerDept": "Finance",
+      "sensitivity": "confidential"
+    },
+    {
+      "id": "rep-hr-attr",
+      "type": "report",
+      "name": "HR — Attrition Summary",
+      "ownerDept": "HR",
+      "sensitivity": "restricted"
+    },
+    {
+      "id": "dash-sales-live",
+      "type": "dashboard",
+      "name": "Sales — Live Pipeline Dashboard",
+      "ownerDept": "Sales",
+      "sensitivity": "internal"
+    },
+    {
+      "id": "ds-payroll",
+      "type": "dataset",
+      "name": "Payroll Events Dataset",
+      "ownerDept": "HR",
+      "sensitivity": "restricted"
+    },
+    {
+      "id": "ds-spend",
+      "type": "dataset",
+      "name": "Vendor Spend Dataset",
+      "ownerDept": "Finance",
+      "sensitivity": "confidential"
+    }
+  ],
+  "actionsByType": {
+    "report": ["read", "export", "share", "delete"],
+    "dashboard": ["read", "share", "delete"],
+    "dataset": ["read", "request_access", "delete"]
+  },
+  "policies": [
+    {
+      "id": "deny_restricted_non_owner",
+      "effect": "DENY",
+      "priority": 100,
+      "description": "Restricted data is denied unless the user's department matches the resource owner department.",
+      "when": {
+        "resourceSensitivityIn": ["restricted"],
+        "notUserDeptEqualsOwnerDept": true
+      }
+    },
+    {
+      "id": "deny_confidential_export_without_mfa",
+      "effect": "DENY",
+      "priority": 95,
+      "description": "Exporting confidential resources requires MFA.",
+      "when": {
+        "resourceSensitivityIn": ["confidential"],
+        "actionIn": ["export"],
+        "userMfaEnabled": false
+      }
+    },
+    {
+      "id": "deny_delete_non_admin",
+      "effect": "DENY",
+      "priority": 90,
+      "description": "Deletes are reserved for admins.",
+      "when": {
+        "actionIn": ["delete"],
+        "userRoleNotIn": ["admin"]
+      }
+    },
+    {
+      "id": "allow_owner_share_internal",
+      "effect": "ALLOW",
+      "priority": 40,
+      "description": "Owners can share internal dashboards and reports.",
+      "when": {
+        "resourceSensitivityIn": ["internal"],
+        "actionIn": ["share"],
+        "userDeptEqualsOwnerDept": true
+      }
+    },
+    {
+      "id": "allow_request_access_datasets",
+      "effect": "ALLOW",
+      "priority": 30,
+      "description": "Users can request access to datasets.",
+      "when": {
+        "resourceTypeIn": ["dataset"],
+        "actionIn": ["request_access"]
+      }
+    }
+  ],
+  "profiles": [
+    {
+      "id": "p_view_fin",
+      "label": "Finance Viewer (MFA off)",
+      "user": { "name": "Kyle", "dept": "Finance", "role": "viewer", "mfa": false }
+    },
+    {
+      "id": "p_analyst_fin",
+      "label": "Finance Analyst (MFA on)",
+      "user": { "name": "Alex", "dept": "Finance", "role": "analyst", "mfa": true }
+    },
+    {
+      "id": "p_mgr_sales",
+      "label": "Sales Manager (MFA on)",
+      "user": { "name": "Michael", "dept": "Sales", "role": "manager", "mfa": true }
+    },
+    {
+      "id": "p_admin",
+      "label": "Admin (MFA on)",
+      "user": { "name": "Adam", "dept": "Engineering", "role": "admin", "mfa": true }
+    }
+  ]
+}
